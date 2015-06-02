@@ -6,7 +6,7 @@ install:
   - curl -O https://raw.githubusercontent.com/spawngrid/kerl/master/kerl
   - chmod a+x kerl
   - export OUT_DIR=`pwd`
-  - echo ${{OUT_DIR}}
+  - echo ${OUT_DIR}
   - ./kerl update releases
   - ./kerl list releases
   - ./kerl list installations
@@ -17,8 +17,8 @@ install:
   - ./otp/activate
   - ./kerl cleanup all
   - ./kerl list installations 
-  - export PATH=${{PATH}}:./otp/bin
-  - echo ${{PATH}}
+  - export PATH=${PATH}:./otp/bin
+  - echo ${PATH}
   - erl -version
 
 branches:
