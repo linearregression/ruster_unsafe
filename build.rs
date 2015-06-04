@@ -15,4 +15,6 @@ fn main() {
 	let out_dir = env::var("OUT_DIR").unwrap();
 	let dst = Path::new(&out_dir);
 	Command::new(escript).arg("gen_api.erl").arg(dst).status().unwrap();
+	Command::new("mv").arg("-f nif_versions.snippet").arg("src").status().unwrap();
+	Command::new("mv").arg("-f nif_api.snippet").arg("src").status().unwrap();
 }
