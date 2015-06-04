@@ -14,7 +14,7 @@ fn main() {
 	// emit generated files to OUT_DIR
 	let out_dir = env::var("OUT_DIR").unwrap();
 	let dst = Path::new(&out_dir);
-	println!("OUT_DIR {0}, dst {1}", out_dir, dst);
+	println!("OUT_DIR {0}, dst {1}", out_dir.display(), dst.display());
 	Command::new(escript).arg("gen_api.erl").arg(dst).status().unwrap();
 	Command::new("ls").arg("-l").arg("*.snippet").status().unwrap();
 	Command::new("mv").arg("-f").arg("nif_versions.snippet").arg("src").status().unwrap();
