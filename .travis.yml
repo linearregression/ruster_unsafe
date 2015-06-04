@@ -19,6 +19,8 @@ install:
   - ./kerl list installations 
   - export PATH=${PATH}:./otp/bin
   - echo ${PATH}
+  - whereis escript
+  - whereis erl
   - erl -version
 
 branches:
