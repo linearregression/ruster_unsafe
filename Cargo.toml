@@ -8,7 +8,7 @@ repository = "https://github.com/goertzenator/ruster_unsafe"
 license = "MIT/Apache-2.0"
 keywords = ["FFI", "Erlang", "NIF"]
 
-build = "build.rs"
+build = "src/build.rs"
 
 [dependencies]
 libc = ">=0.1"
