@@ -290,8 +290,8 @@ get_nif_version() ->
     version_string2tuple(Ver).
 
 version_string2tuple("2.7") -> {2,7};
-version_string2tuple(_) -> 
-        io:format("Found Erlang NIF version ~s.\n",[Version]),
+version_string2tuple(Ver) -> 
+        io:format("Found Erlang NIF version ~s.\n",[Ver]),
         unsupported.
 
 check_version(unsupported) ->
